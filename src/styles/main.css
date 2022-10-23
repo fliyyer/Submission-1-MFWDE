@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins' , sans-serif;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background:#47B5FF;
+  border-radius: 2px;
+}
+
+header {
+  height: 40px;
+  /* padding-top: 0; */
+}
+
+main {
+  padding-top: 3px;
+}
+
+main h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  background-color: #ffffff;
+}
+
+img {
+  display: block;
+}
+
+#drawer {
+  width: 180px;
+  height: 88%;
+  padding-top: 12px;
+  position: absolute;
+  margin-top: -10px;
+  transform: translate(-250px, 0);
+  transition: transform 0.3s ease-in-out;
+  background-color: #06283D;
+}
+
+#drawer.open {
+  transform: translate(0, 0)
+}
+
+#drawer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#drawer li {
+  padding: 16px 0;
+}
+
+#drawer li a:hover {
+  color: #47B5FF;
+}
+
+#drawer a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 15px 20px;
+}
+
+#drawer .drawer-title {
+  font-size: 30px;
+  margin-left: 0;
+  font-weight: bold;
+}
+
+.main-title {
+  text-decoration: none;
+  font-weight: bold;
+  color: #06283D;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 35px;
+}
+
+#hamburger {
+  font-size: 49px;
+  width: 60px;
+  text-decoration: none;
+  margin-left: 12px;
+  color: #06283D;
+}
+
+.jumbotron {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 590px;
+}
+
+.jumbotron-title {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 60%;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+}
+
+.wrapper {
+  margin: 20px 5%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.box {
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 10px;
+}
+
+.box img {
+  width: 100%;
+  height: 240px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box p {
+  text-align: justify;
+  font-size: 10px;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.box .title {
+  font-size: 18px;
+  margin-left: 4%;
+  font-weight: bold;
+}
+
+.box .info {
+  font-size: 16px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  color: #ffffff;
+  background: #06283D;
+  box-shadow: 0 4px 8px 0 rgba(250, 250, 250, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+  margin-top: 0;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.box .info b {
+  color: yellow;
+}
+
+footer {
+  width: 100%;
+  background: #06283D;
+  height: 60px;
+  color: #ffffff;
+  text-align: center;
+}
+
+footer p{
+  padding-top: 17px;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+      display: grid;
+      grid-template-rows: 70px auto;
+  }
+
+  header {
+      height: 79px;
+      padding-top: 0;
+  }
+
+  #drawer {
+      width: 100%;
+      padding-top: 0;
+      margin-top: 0;
+      position: relative;
+      transform: translate(0, 0);
+  }
+
+  #drawer ul {
+      right: 0;
+      top: 4px;
+      position: absolute;
+  }
+
+  #drawer li {
+      padding: 24px 0;
+      display: inline;
+  }
+
+  #drawer li a:hover {
+      color: #47B5FF;
+  }
+
+  #drawer a {
+      padding: 12px 20px;
+  }
+
+  .drawer-title {
+      position: absolute;
+      font-size: 10px;
+      left: 5%;
+      top: 0;
+      margin-left: 0;
+      padding: 16px;
+  }
+
+  .main-title {
+      display: none;
+  }
+
+  .jumbotron-title {
+      text-align: center;
+      font-size: 73px;
+      font-weight: bold;
+      padding-top: 220px;
+      margin-top: -3px;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      color: #ffffff;
+  }
+
+  .wrapper {
+      margin: 20px 4%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  #hamburger {
+      display: none;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: 10px;
+  top: -45px;
+  background-color: #06283D;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 80px;
+}
+
+@media screen and (min-width: 1000px) {
+  .drawer-title {
+      position: absolute;
+      left: 10%;
+      top: 0;
+      margin-left: 0;
+      padding: 16px;
+  }
+
+  #drawer ul {
+      right: 10%;
+      top: 4px;
+      position: absolute;
+  }
+
+  .wrapper {
+      margin: 20px 5%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
